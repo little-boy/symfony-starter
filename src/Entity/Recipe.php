@@ -11,8 +11,8 @@ class Recipe
 {
     /**
      * @ORM\Id
+     * @ORM\Column(type="integer")
      * @ORM\GeneratedValue
-     * @ORM\Column(type="guid")
      */
     private $id;
 

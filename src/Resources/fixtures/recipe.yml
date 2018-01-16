@@ -1,0 +1,4 @@
+App\Entity\Recipe:
+    recipe_{1..10}:
+        title: <sentence(6)>
+        subtitle: <sentence(12)>
