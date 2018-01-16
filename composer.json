@@ -59,7 +59,19 @@
         ],
         "test": [
             "./vendor/bin/phpcs --standard=PSR2 ./src",
+            "bin/console hautelook:fixtures:load -n",
             "./bin/phpunit"
+        ],
+        "clean": [
+            "rm src/Controller/RecipeController.php",
+            "rm src/Entity/Recipe.php",
+            "rm src/Repository/RecipeRepository.php",
+            "rm src/Resources/fixtures/recipe.yml",
+            "rm src/Service/RecipeService.php",
+            "rm tests/Controller/RecipeControllerTest.php",
+            "rm tests/Service/RecipeServiceTest.php",
+            "git checkout f269d996971716218bf283b83016b285f231adc9 -- config/services.yaml",
+            "bin/console c:c"
         ]
     },
     "conflict": {
